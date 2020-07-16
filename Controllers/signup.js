@@ -129,7 +129,7 @@ const signup = async (req, res, next) => {
 
     }
   
-    res.json({ userId:createduser.id,email:createduser.email,token:token });
+    res.status(201).json({ userId:existingUser.id ,email:existingUser.email,token:token});
   };
 
   exports.signup=signup;
