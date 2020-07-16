@@ -1,0 +1,8 @@
+{
+    "env" : {
+        "DB_USER":"Ramu",
+        "DB_PASSWORD":"Ramu123",
+        "DB_NAME": "Rajesh",
+        "JWT_KEY":"RajeshRockStar"
+    }
+}
