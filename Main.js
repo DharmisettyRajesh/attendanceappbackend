@@ -13,7 +13,7 @@ const authorization=require('./Routes/signup.js');
 const app = express();
 
 app.use(bodyparser.json());
-app.use(express.static(path.json('public')));
+app.use(express.static(path.join('public')));
 
 app.use('/firstyear',first);
 app.use('/secondyear',second);
