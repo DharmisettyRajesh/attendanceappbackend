@@ -13,7 +13,7 @@ const authorization=require('./Routes/signup.js');
 const app = express();
 
 app.use(bodyparser.json());
-app.use(express.static(path.join('public')));
+//app.use(express.static(path.join('public')));
 
 app.use('/firstyear',first);
 app.use('/secondyear',second);
@@ -27,10 +27,10 @@ app.use((req,res,next)=>{
     next();
   })
 
-  app.use((req,res,next)=>{
+ app.use((req,res,next)=>{
     res.sendFile(path.resolve(__dirname,'public','index.html'));
   })
-app.use((req, res, next) => {
+ app.use((req, res, next) => {
     const error = new httperror("Could not find this route.", 404);
     throw error;
   });
