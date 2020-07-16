@@ -8,12 +8,13 @@ const second= require('./Routes/secondyear.js');
 const third= require('./Routes/thirdyear.js');
 const fourth= require('./Routes/fourthyear.js');
 const authorization=require('./Routes/signup.js');
+const path=require('path');
 
 
 const app = express();
 
 app.use(bodyparser.json());
-//app.use(express.static(path.join('public')));
+app.use(express.static(path.join('public')));
 
 app.use('/firstyear',first);
 app.use('/secondyear',second);
