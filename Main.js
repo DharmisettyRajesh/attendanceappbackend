@@ -44,7 +44,7 @@ app.use((req, res, next) => {
     
   )
   .then(()=>{
-      app.listen(5000 || process.env.PORT);
+      app.listen(process.env.PORT || 5000);
       console.log('connected');
   })
   .catch(()=>{
