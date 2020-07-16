@@ -15,7 +15,7 @@
   },
   "devDependencies": {},
   "scripts": {
-    "start": " nodemon Main.js",
+    "start": " node Main.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
