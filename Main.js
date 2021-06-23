@@ -1,4 +1,4 @@
-const express = require('express');
+/*const express = require('express');
 const mongoose = require('mongoose');
 const bodyparser=require('body-parser');
 
@@ -45,7 +45,7 @@ app.use((req,res,next)=>{
   });
 
   mongoose.connect(
-      `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASSWORD}@cluster0-grn1p.mongodb.net/${process.env.DB_NAME}?retryWrites=true&w=majority`,{useNewUrlParser:true,useUnifiedTopology:true}
+      `mongodb+srv://Ramu:Ramu123@cluster0-grn1p.mongodb.net/Rajesh?retryWrites=true&w=majority`,{useNewUrlParser:true,useUnifiedTopology:true}
     
   )
   .then(()=>{
@@ -55,5 +55,30 @@ app.use((req,res,next)=>{
   .catch((err)=>{
       console.log(err);
   });
+*/
+const express =require('express');
+const app=express();
+const bodyparser=require('body-parser');
+app.use(bodyparser.json());
+
+app.get('/',(req,res)=>{
+  var client= require('twilio')('ACe793f04f0f71ee5bbc36fe2f877a18fd','e1244f47a9f690cde1eec2a35b461cf5',{
+    lazyLoading: true
+  });
+  var b=req.body.number;
+  const a="+919010910320"
+  client.messages.create({
+    body:'Your account has been creted successfully',
+    to:b,
+    from:'+16626726609'
+    
+  })
+  res.send('message send successfully');
+});
+const PORT=5000;
+app.listen(PORT,()=>{
+  console.log('App is listening at port ');
+})
+
 
 

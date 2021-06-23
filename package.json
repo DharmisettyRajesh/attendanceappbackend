@@ -11,11 +11,12 @@
     "express-validator": "^6.6.0",
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.9.23",
-    "nodemon": "^2.0.4"
+    "nodemon": "^2.0.4",
+    "twilio": "^3.51.0"
   },
   "devDependencies": {},
   "scripts": {
-    "start": " node Main.js",
+    "start": " nodemon Main.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",

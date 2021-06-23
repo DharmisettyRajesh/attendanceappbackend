@@ -54,7 +54,7 @@ const signup = async (req, res, next) => {
       await createdUser.save();
     } catch (err) {
       const error = new httperror(
-        'Signing up failed, please try again later.',
+        'Signing up failed, please try again later12.',
         500
       );
       return next(error);
